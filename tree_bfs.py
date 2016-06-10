@@ -42,12 +42,11 @@ def explore_node(nodeNum):
 # __main__ loop
 queue.enqueue(node[0].get_nodeNum())
 while (queue.is_empty() != True):
-    print "Start: ", queue.contents()
+    #print "Start: ", queue.contents()
     curr_node = queue.peek()
     ret = explore_node(curr_node)
 
     #if all done, change to black
-    #if ret == 1:
     node[curr_node].set_data("Black")
     queue.dequeue()
     print queue.contents()
